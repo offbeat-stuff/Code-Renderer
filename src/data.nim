@@ -1,15 +1,3 @@
-# Code-Renderer
-Renders a video of code through pixie, bat and ffmpeg.
-
-Uses base16 colorscheme from https://github.com/rxyhn/yoru
-
-Uses bat for syntax highlighting https://github.com/sharkdp/bat 
-
----
-
-## Use src/data.nim to change settings
-
-```nim
 const foreground* = "#edeff0"
 const background* = "#0c0e0f"
 
@@ -28,10 +16,3 @@ const padding* = 10
 const frameRate* = 30
 
 const batCmd* = "bat --language=nim --theme base16 -f -pp -"
-```
-
----
-
-Use `renderVideo(srcFile)` to render the video.
-
-`main.nim` has `renderVideo(readFile paramStr(1))` at end of file, and the video is output to bin/output.mp4 and overwritten without confirmation
